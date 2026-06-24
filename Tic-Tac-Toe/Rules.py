@@ -43,15 +43,14 @@ class Rules:
             [self.board[0][0], self.board[1][1], self.board[2][2]],
             [self.board[0][2], self.board[1][1], self.board[2][0]],
         ]
-        if ([True, True, True] or [False, False, False]) in winning_lines:
-            if [True, True, True] in winning_lines:
-                self.player_1 = True
-                self.winner = True
-                self.game_over = True
-                return self.winner, self.game_over
-            if [False, False, False] in winning_lines:
-                self.player_2 = False
-                self.winner = False
-                self.game_over = True
-                return self.winner, self.game_over
+        if [True, True, True] in winning_lines:
+            self.player_1 = True
+            self.winner = True
+            self.game_over = True
+            return self.winner, self.game_over
+        if [False, False, False] in winning_lines:
+            self.player_2 = False
+            self.winner = False
+            self.game_over = True
+            return self.winner, self.game_over
         return self.game_over
