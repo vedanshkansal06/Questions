@@ -55,7 +55,7 @@ class ParkingLot:
             self.recalculate_capacity()
 
     def recalculate_capacity(self):
-        self.capacity = sum(len(floor.spots) for floor in self.floors.values())
+        self.capacity = sum(len(floor.spots.values()) for floor in self.floors.values())
 
     def get_available_spots(self,vehicle: Vehicle) -> Optional[ParkingSpot]:
         for floor in self.floors.values():
