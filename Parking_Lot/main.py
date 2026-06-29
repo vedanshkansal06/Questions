@@ -48,7 +48,7 @@ def main():
     admin = Admin("Vedansh")
 
     parking_attendant = ParkingAttendant("Krish")
-    admin.add_attendant(parking_attendant)
+    parking_lot.add_attendant(parking_attendant)
 
     active_ticket = {}
 
