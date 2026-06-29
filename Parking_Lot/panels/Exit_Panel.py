@@ -32,7 +32,7 @@ class ExitPanel:
             return False
         floor = parking_lot.get_floor_by_spot(ticket.spot_number)
         if floor:
-            floor.mark_spot_free()
+            floor.mark_spot_free(ticket.spot_number)
             parking_lot.decrease_occupancy()
             print(f"Exit Panel {self.panel_id}: Spot {ticket.spot_number}Free.")
             return True
