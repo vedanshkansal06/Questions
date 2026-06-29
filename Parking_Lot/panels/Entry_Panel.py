@@ -10,7 +10,7 @@ class EntryPanel:
     def process_entry(self, vehicle: Vehicle) -> Optional[ParkingTicket]:
         parking_lot = ParkingLot.get_instance()
 
-        if parking_lot.is_full:
+        if parking_lot.is_full():
             print(f"Entry Panel {self.panel_id}: Parking Lot Full")
             return None
         spot = parking_lot.get_available_spot(vehicle)
