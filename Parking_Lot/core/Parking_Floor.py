@@ -24,6 +24,7 @@ class ParkingFloor:
                 counts[spot.spot_type] += 1
         for spot_type, count in counts.items():
             self.display_board.update_count(spot_type, count)
+        return counts
 
     def add_spot(self,spot: ParkingSpot):
         self.spots[spot.spot_id] = spot
